@@ -4,10 +4,10 @@
   <mat-card>
     <mat-card-content>
       <div class="content1">
-        <h2>ME</h2>
+        <h2>ฉัน</h2>
         <button mat-fab color="primary" class="score">{{ scores[0] }}</button>
       </div>
-      <h3>Choose your weapon:</h3>
+      <h3>เลือกเลยจะเอาอันไหน</h3>
       <div class="content2">
         <i
           (click)="pick(0)"
@@ -30,7 +30,7 @@
   <mat-card>
     <mat-card-content>
       <div class="content1">
-        <h2>AI BOT</h2>
+        <h2>บอท</h2>
         <button mat-fab color="accent" class="score">{{ scores[1] }}</button>
       </div>
       <br /><br />
@@ -49,15 +49,17 @@
   style="flex-direction: column"
 >
   <div [ngSwitch]="theResult">
-    <ng-template [ngSwitchCase]="0"> <h1>You're the winner!</h1></ng-template>
-    <ng-template [ngSwitchCase]="1"> <h1>You lose.</h1> </ng-template>
-    <ng-template [ngSwitchCase]="2"> <h1>It's a tie!</h1> </ng-template>
+    <ng-template [ngSwitchCase]="0"> <h1>ชนะ ดวงดีนะเนี่ย</h1></ng-template>
+    <ng-template [ngSwitchCase]="1">
+      <h1>แพ้สะแล้ว ไม่เป็นไรเอาใหม่</h1>
+    </ng-template>
+    <ng-template [ngSwitchCase]="2">
+      <h1>สะ สะ เสมอไม่จริงนะ!</h1>
+    </ng-template>
     <ng-template ngSwitchDefault> </ng-template>
   </div>
-  <p>Pick again to continue or</p>
-  <button (click)="reset()" mat-raised-button color="primary">
-    Reset score
-  </button>
+  <p>เลือกอาวุธหรือจะกดรีเซ็ทสกอร์ก็ได้นะ</p>
+  <button (click)="reset()" mat-raised-button color="primary">รีแต้ม</button>
 </div>
 
 <div class="flex-container flex-center" *ngIf="loading">

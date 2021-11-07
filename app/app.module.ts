@@ -4,22 +4,26 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule,
- MatCheckboxModule,
- MatCardModule,
- MatProgressSpinnerModule,
-MatToolbarModule} from '@angular/material';
-@NgModule({
-  imports:      [ BrowserModule, 
-  FormsModule,
-  BrowserAnimationsModule,
-  MatToolbarModule,
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
   MatCardModule,
   MatProgressSpinnerModule,
-  MatButtonModule,
-  MatCheckboxModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  MatToolbarModule,
+} from '@angular/material';
+@NgModule({
+  imports: [
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatProgressSpinnerModule,
+    MatButtonModule,
+    MatCheckboxModule,
+  ],
+  declarations: [AppComponent, HelloComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
